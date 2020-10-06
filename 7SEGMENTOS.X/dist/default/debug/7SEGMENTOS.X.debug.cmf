@@ -1,0 +1,260 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$build/default/debug/Display.o
+udata RAM 1 20 20 3 1
+resetVec CODE 0 37E 37E 3 2
+code CODE 0 381 381 7F 2
+config CONFIG 4 2007 2007 2 2
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 23-6F 1
+RAM A0-EF 1
+RAM 110-16F 1
+RAM 190-1EF 1
+BANK0 23-6F 1
+BANK1 A0-EF 1
+BANK2 110-16F 1
+BANK3 190-1EF 1
+CONST 0-6FB 1
+CONST 800-1FFF 1
+ENTRY 0-6FB 1
+ENTRY 800-1FFF 1
+IDLOC 2000-2003 2
+CODE 0-6FB 1
+CODE 800-1FFF 1
+SFR0 0-1F 1
+SFR1 80-9F 1
+SFR2 100-10F 1
+SFR3 180-18F 1
+COMMON 70-7F 1
+STRCODE 0-6FB 1
+STRCODE 800-1FFF 1
+STRING 0-6FB 1
+STRING 800-1FFF 1
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$build/default/debug/Display.o
+37E resetVec CODE >25:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+37E resetVec CODE >26:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+380 resetVec CODE >27:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+381 code CODE >30:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+381 code CODE >31:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+383 code CODE >32:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+384 code CODE >33:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+385 code CODE >34:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+387 code CODE >35:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+388 code CODE >38:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+388 code CODE >39:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+38A code CODE >40:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+38B code CODE >41:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+38C code CODE >42:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+38E code CODE >43:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+38F code CODE >46:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+38F code CODE >47:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+391 code CODE >48:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+392 code CODE >49:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+393 code CODE >50:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+395 code CODE >51:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+396 code CODE >54:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+396 code CODE >55:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+398 code CODE >56:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+399 code CODE >57:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+39A code CODE >58:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+39C code CODE >59:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+39D code CODE >62:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+39D code CODE >63:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+39F code CODE >64:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3A0 code CODE >65:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3A1 code CODE >66:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3A3 code CODE >67:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3A4 code CODE >70:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3A4 code CODE >71:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3A6 code CODE >72:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3A7 code CODE >73:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3A8 code CODE >74:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3AA code CODE >75:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3AB code CODE >78:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3AB code CODE >79:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3AD code CODE >80:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3AE code CODE >81:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3AF code CODE >82:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3B1 code CODE >83:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3B2 code CODE >86:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3B2 code CODE >87:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3B4 code CODE >88:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3B5 code CODE >89:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3B6 code CODE >90:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3B8 code CODE >91:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3B9 code CODE >94:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3B9 code CODE >95:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3BB code CODE >96:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3BC code CODE >97:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3BD code CODE >98:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3BF code CODE >99:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3C0 code CODE >102:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3C0 code CODE >103:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3C2 code CODE >104:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3C3 code CODE >105:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3C4 code CODE >106:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3C6 code CODE >107:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3C7 code CODE >110:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3C7 code CODE >111:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3C8 code CODE >112:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3C9 code CODE >113:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3CC code CODE >114:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3CD code CODE >115:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3CE code CODE >118:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3CE code CODE >119:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3CF code CODE >120:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3D0 code CODE >121:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3D1 code CODE >122:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3D2 code CODE >123:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3D3 code CODE >124:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3D4 code CODE >127:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3D4 code CODE >128:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3D5 code CODE >129:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3D6 code CODE >130:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3D7 code CODE >131:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3D8 code CODE >132:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3D9 code CODE >133:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3DA code CODE >136:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3DA code CODE >137:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3DB code CODE >138:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3DC code CODE >139:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3DD code CODE >140:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3DF code CODE >141:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3E0 code CODE >142:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3E2 code CODE >143:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3E3 code CODE >144:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3E4 code CODE >145:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3E6 code CODE >146:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3E7 code CODE >147:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3E9 code CODE >148:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3EA code CODE >149:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3EB code CODE >150:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3EB code CODE >151:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3EC code CODE >152:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3ED code CODE >153:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3EE code CODE >154:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3EF code CODE >155:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3F0 code CODE >156:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3F1 code CODE >157:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3F2 code CODE >158:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3F3 code CODE >159:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3F4 code CODE >160:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3F5 code CODE >161:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3F6 code CODE >162:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3F7 code CODE >163:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3F8 code CODE >164:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3F9 code CODE >165:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3FA code CODE >166:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3FB code CODE >167:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3FC code CODE >168:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3FD code CODE >169:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3FE code CODE >170:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+3FF code CODE >171:C:\Users\sanborns\MPLABXProjects\7SEGMENTOS.X\Display.s
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+__Hspace_0 400 0 ABS 0 - -
+__Hspace_1 23 0 ABS 0 - -
+__Hspace_3 0 0 ABS 0 - -
+__Hspace_4 4010 0 ABS 0 - -
+__Hudata_bank0 0 0 ABS 0 udata_bank0 -
+__Hudata_bank1 0 0 ABS 0 udata_bank1 -
+__Hudata_bank2 0 0 ABS 0 udata_bank2 -
+__Hudata_bank3 0 0 ABS 0 udata_bank3 -
+__LresetVec 0 0 ABS 0 resetVec -
+__HresetVec 0 0 ABS 0 resetVec -
+__Hedata 0 0 EEDATA 3 edata -
+__Hudata 0 0 ABS 0 udata -
+__Hconfig 4012 0 CONFIG 4 config -
+__Ledata 0 0 EEDATA 3 edata -
+__Ludata 0 0 ABS 0 udata -
+__Hcode 0 0 ABS 0 code -
+__Hdata 0 0 ABS 0 data -
+__Lcode 0 0 ABS 0 code -
+__Ldata 0 0 ABS 0 data -
+__S0 800 0 ABS 0 - -
+__S1 23 0 ABS 0 - -
+__Lconfig 0 0 CONFIG 4 config -
+__Lspace_0 0 0 ABS 0 - -
+__Lspace_1 0 0 ABS 0 - -
+__Lspace_3 0 0 ABS 0 - -
+__Lspace_4 0 0 ABS 0 - -
+__Ludata_bank0 0 0 ABS 0 udata_bank0 -
+__Ludata_bank1 0 0 ABS 0 udata_bank1 -
+__Ludata_bank2 0 0 ABS 0 udata_bank2 -
+__Ludata_bank3 0 0 ABS 0 udata_bank3 -
+__Hudata_shr 0 0 ABS 0 udata_shr -
+__Ludata_shr 0 0 ABS 0 udata_shr -
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+udata 1 20 20 3 1
+resetVec 0 37E 6FC 3 2
+code 0 381 702 7F 2
+# %NOTES Section
+# This section contains data of all the note-psects.  The beginning of the section
+# is indicated by %NOTES. The first line indicates the name and decimal
+# byte-length of the first note-psect, e.g.
+#   $codecov_info_hdr 16
+# Each line that follows contains the byte-data of the psect in hexadecimal as a
+# space-separated list. These lines are limited to 16 bytes of data.
+%NOTES
